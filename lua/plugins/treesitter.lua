@@ -8,7 +8,7 @@ return {
       ensure_installed = {"lua", "c", "ruby", "javascript", "html", "css"},
       highlight = { enable = true },
       indent = { enable = true },
-    })  
+    })
   end
 }
 
