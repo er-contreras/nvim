@@ -9,5 +9,14 @@ return {
   config = function()
     vim.keymap.set("n", "<C-b>", ":Neotree filesystem reveal left<CR>")
     vim.keymap.set("n", "<C-b>", ":Neotree toggle<CR>")
+
+    require("neo-tree").setup({
+      window = {
+        width = 90,
+        mappings = {
+          ["P"] = { "toggle_preview", config = { use_float = false, use_image_nvim = true } },
+        },
+      },
+    })
   end,
 }

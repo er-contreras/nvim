@@ -1,9 +1,9 @@
 return {
-	"nvim-lualine/lualine.nvim",
+  "nvim-lualine/lualine.nvim",
 	config = function()
-		require("lualine").setup({
+  require("lualine").setup({
 			options = {
-				theme = "everforest",
+				theme = "github_dark",
 			},
 		})
 	end,
