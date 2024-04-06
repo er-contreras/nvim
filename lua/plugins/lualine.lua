@@ -4,6 +4,7 @@ return {
   require("lualine").setup({
 			options = {
 				theme = "github_dark",
+        section_separators = { left = "", right = "" },
 			},
 		})
 	end,
