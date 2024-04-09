@@ -3,7 +3,7 @@ return {
 	config = function()
   require("lualine").setup({
 			options = {
-				theme = "github_dark",
+				theme = "github-nvim-theme",
         section_separators = { left = "", right = "" },
 			},
 		})
