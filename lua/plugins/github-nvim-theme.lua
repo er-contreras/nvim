@@ -4,7 +4,13 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd('colorscheme github_dark')
+    require("github-theme").setup({
+      options = {
+        transparent = true
+      }
+    })
+
+      vim.cmd('colorscheme github_dark')
 		end,
 	},
 }
