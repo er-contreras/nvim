@@ -18,6 +18,7 @@ return {
             ".git/.*",
             "vendor/.*",
             "tmp/.*",
+            ".target/.*",
           }
         },
         extensions = {
