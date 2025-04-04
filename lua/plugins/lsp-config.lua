@@ -11,9 +11,10 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",
-          "tsserver",
-          "ruby_ls",
+          "ts_ls",
+          "ruby_lsp",
           "html",
+          -- "clangd",
           "rust_analyzer",
           "wgsl_analyzer"
         },
@@ -25,8 +26,8 @@ return {
     config = function()
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({})
-      lspconfig.tsserver.setup({})
-      lspconfig.ruby_ls.setup({})
+      lspconfig.ts_ls.setup({})
+      lspconfig.ruby_lsp.setup({})
       lspconfig.clangd.setup({})
       lspconfig.html.setup({})
       lspconfig.rust_analyzer.setup({})
