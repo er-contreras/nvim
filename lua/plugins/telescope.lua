@@ -1,6 +1,6 @@
 return {
   {
-    'nvim-telescope/telescope.nvim', tag = '0.1.5',
+    'nvim-telescope/telescope.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
       local builtin = require("telescope.builtin")
@@ -11,15 +11,30 @@ return {
   {
     "nvim-telescope/telescope-ui-select.nvim",
     config = function()
-      require("telescope").setup ({
+      require("telescope").setup({
         defaults = {
+
           file_ignore_patterns = {
             "node_modules/.*",
             ".git/.*",
             "vendor/.*",
             "tmp/.*",
             ".target/.*",
-          }
+          },
+        },
+        pickers = {
+          find_files = ({
+            layout_strategy='vertical',
+            layout_config = {
+              vertical = {
+                height = 0.95,
+                width = 0.95
+              }
+            },
+
+            -- previewer = false,
+            theme = "dropdown"
+          }),
         },
         extensions = {
           ["ui-select"] = {
@@ -30,4 +45,3 @@ return {
     end,
   },
 }
-
